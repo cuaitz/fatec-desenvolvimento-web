@@ -1,0 +1,42 @@
+:root {
+    --primary: #a0a0ff;
+    --secondary: #8080ff;
+    --background: #404040;
+    --text-color: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+body {
+    margin: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+}
+
+img {
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+table {
+    border: 1px solid var(--secondary);
+    padding: 5px;
+}
+
+tr, th, td {
+    border: 1px solid var(--primary);
+    padding: 5px;
+}
+
+a:hover {
+    color: var(--secondary);
+}
