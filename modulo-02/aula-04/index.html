@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 | Formulários</title>
+</head>
+<body>
+    <header>
+        <h1>Matricule-se na Fatec!</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome: </label>
+                <input name="nome" type="text" id="nome" required minlength="5">
+                <br>
+                <br>
+                <label for="email">E-mail: </label>
+                <input name="email" type="email" id="email" >
+                <br>
+                <br>
+                <label for="data_nasc">Data de Nascimento: </label>
+                <input name="data_nasc" type="date" id="data_nasc">
+                <br>
+                <br>
+                <label for="cpf">CPF: </label>
+                <input name="cpf" type="text" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" id="cpf">
+            </fieldset>
+            <fieldset>
+                <legend>Dados Acadêmicos</legend>
+                <label for="curso">Curso: </label>
+                <select id="curso" name="curso">
+                    <option value="1">ADS</option>
+                    <option value="2">AGRO</option>
+                    <option value="3">COMEX</option>
+                </select>
+                <br>
+                <br>
+
+                <fieldset>
+                    <legend>Período: </legend>
+                    
+                    <label for="periodo_manha">Manhã</label>
+                    <input name="periodo" type="radio" id="periodo_manha">
+                    
+                    <label for="periodo_noite">Noite</label>
+                    <input name="periodo" type="radio" id="periodo_noite">
+                </fieldset>
+                <br>
+                <br>
+
+                <label for="programou">Já programou antes? </label>
+                <input type="checkbox" name="programou" id="programou">
+            </fieldset>
+            <fieldset>
+                <legend>Detalhes</legend>
+                <label>Observações: 
+                    <textarea name="observacoes"></textarea>
+                </label>
+                <br>
+                <br>
+
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
