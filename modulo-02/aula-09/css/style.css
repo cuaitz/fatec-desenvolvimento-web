@@ -1,0 +1,136 @@
+:root {
+    --primary: #a0a0ff;
+    --secondary: #8080ff;
+    --background: #404040;
+    --text-color: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color);
+}
+
+nav {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid var(--secondary);
+    border-radius: 2rem;
+    flex: 1 1 200px;
+    height: 200px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    width: 100%; /* FIX: 1000px é mto grande para mobile */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    flex: 0 0 250px;
+}
+
+.content {
+    flex: 1;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    padding: 25px 50px;
+}
+
+/* FIX: Sidebar não cabe no mobile*/
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+/* FIX: Nav não cabe no mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* FIX: Cards ficam mto apertadinhos no mobile */
+@media (max-width: 768px) {
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 300px;
+    }
+}
+
+/* Desgraça de hero viu */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+        padding: 20px;
+    }
+}
