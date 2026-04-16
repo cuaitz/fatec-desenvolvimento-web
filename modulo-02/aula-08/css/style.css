@@ -1,0 +1,105 @@
+:root {
+    --primary: #a0a0ff;
+    --secondary: #8080ff;
+    --background: #404040;
+    --text-color: #eeeeee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+nav {
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+
+.links {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: grid;
+    align-content: start;
+    place-items: center;
+    margin: 10px;
+    padding: 15px;
+    border: 2px solid var(--secondary);
+    border-radius: 2rem;
+    height: 200px;
+}
+
+main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas:
+        "sidebar content";
+
+    grid-template-columns: 250px 1fr;
+    width: 1000px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    padding: 20px;
+    gap: 10px;
+    align-content: start;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 25px 50px;
+}
