@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusto Fogaça - Game Developer</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <h1 class="title">> Augusto Fogaça</h1>
+            <button class="menu_toggle">≡</button>
+            <ul class="nav_links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Tecnologias</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero container">
+            <p class="subtitle">Game Developer</p>
+            <h2>Augusto Fogaça</h2>
+            <p>
+                Desenvolvedor focado em sistemas, mecânicas e arquitetura de jogos.
+            </p>
+        </section>
+        <section id="about" class="about container">
+            <img src="./img/literalmente-eu.png" alt="Minha Foto" class="profile-pic">
+            <div>
+                <h2>Sobre mim</h2>
+                <p>
+                    Olá! Sou um desenvolvedor indie com foco na criação de jogos e experiências interativas. Tenho interesse em arquitetura de software aplicada a jogos e desenvolvimento de ferramentas próprias, além de experiência prática em programação web, mobile e design de jogos. Atualmente estou desenvolvendo um jogo indie chamado <strong>Protocol: Umbra</strong> e trabalhando na criação de um framework em Python chamado <strong>Tessella</strong>.
+                </p>
+            </div>
+        </section>
+        <section id="projects" class="projects container">
+            <h2>Projetos</h2>
+            <br>
+            <div class="project_grid">
+                <a href="https://store.steampowered.com/app/4386250/Protocol_Umbra/" target="_blank">
+                    <article class="card">
+                        <img src="./img/umbra.gif" alt="Showcase do projeto Protocol: Umbra">
+                        <br>
+                        <h3>Protocol: Umbra</h3>
+                        <p>Um jogo de observação sci-fi onde você joga como a IA de uma nave espacial, cujo papel é detectar e reportar anomalias antes que elas destruam a tripulação.</p>
+                    </article>
+                </a>
+                <article class="card">
+                    <img src="./img/tessella.gif" alt="Showcase do projeto Tessella">
+                    <br>
+                    <h3>Tessella</h3>
+                    <p>Um framework para criação de GUIs para Pygame em desenvolvimento. Ele é responsável por todas as interfaces presentes no Protocol: Umbra.</p>
+                </article>
+                <article class="card">
+                    <img src="./img/battleships.png" alt="Showcase do projeto Batalha Naval">
+                    <br>
+                    <h3>Batalha Naval</h3>
+                    <p>Um Batalha Naval personalizável desenvolvido em Python com Pygame, que permite batalhas JxJ e contra IA.</p>
+                </article>
+                <a href="https://github.com/cuaitz/localpad" target="_blank">
+                    <article class="card">
+                        <img src="./img/localpad.png" alt="Showcase do projeto Localpad">
+                        <br>
+                        <h3>Localpad</h3>
+                        <p>Uma alternativa minimalista e portátil ao Dontpad, com proteção por senha para armazenar notas de forma privada na web.</p>
+                    </article>
+                </a>
+            </div>
+        </section>
+        <section id="skills" class="skills container">
+            <h2>Tecnologias e competências</h2>
+            <br>
+            <ul class="skills_list">
+                <li>Python</li>
+                <li>Pygame</li>
+                <li>PHP</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>Dart</li>
+                <li>Flutter</li>
+                <li>Aseprite</li>
+                <li>Arquitetura de sistemas</li>
+                <li>Design de jogos</li>
+            </ul>
+        </section>
+        <section id="contact" class="contact container">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Mensagem</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2026 | Augusto Fogaça</p>
+        <div>
+            <a href="https://github.com/cuaitz">GitHub</a>
+            <a href="https://www.linkedin.com/in/augusto-fogaca/">LinkedIn</a>
+            <a href="https://store.steampowered.com/publisher/cuaitz">Steam</a>
+        </div>
+    </footer>
+    <script>
+        const btn = document.querySelector('.menu_toggle');
+        const nav = document.querySelector('.nav_links');
+
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
