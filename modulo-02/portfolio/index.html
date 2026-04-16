@@ -119,9 +119,23 @@
     <script>
         const btn = document.querySelector('.menu_toggle');
         const nav = document.querySelector('.nav_links');
+        const links = document.querySelectorAll('.nav_links a');
 
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
             nav.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !btn.contains(e.target)) {
+                nav.classList.remove('active');
+            }
         });
     </script>
 </body>
