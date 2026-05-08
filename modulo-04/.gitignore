@@ -1,0 +1,5 @@
+
+# Cache do python (amo)
+.pyc
+
+__pycache__/
