@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Pokédex</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Pokédex</h1>
+
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="pokemonInput" 
+        placeholder="Digite o nome ou número do Pokémon"
+      />
+
+      <button id="searchBtn">
+        Buscar
+      </button>
+    </div>
+    <div class="pokemon-card" id="loadingCard">
+        <p>Carregando...</p>
+    </div>
+    <div class="pokemon-card" id="pokemonCard">
+      <div class="pokemon-header">
+        <div class="pokemon-info">
+          <h2 id="pokemonName">Pikachu</h2>
+          <div class="types" id="pokemonTypes">
+            <span class="type-badge">electric</span>
+          </div>
+        </div>
+        <div class="pokemon-image">
+          <img 
+            id="pokemonImage"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+            alt="Pokemon"
+          />
+        </div>
+      </div>
+      <div class="stats" id="pokemonStats">
+        <div class="stat">
+          <div class="stat-top">
+            <span>HP</span>
+            <span>35</span>
+          </div>
+          <div class="bar">
+            <div class="fill" style="width: 35%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
