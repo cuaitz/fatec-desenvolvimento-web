@@ -3,6 +3,6 @@
 https://fatec.leandromedeiros.com/
 
 ## Links da aula 21
-https://cuaitz.github.io/
-https://cuaitz.github.io/fatec-desenvolvimento-web-m2/
-https://cuaitz.github.io/fatec-desenvolvimento-web-m3/
+[Portfolio](https://cuaitz.github.io/)\
+[Projeto do Módulo 2](https://cuaitz.github.io/fatec-desenvolvimento-web-m2/)\
+[Projeto do Módulo 3](https://cuaitz.github.io/fatec-desenvolvimento-web-m3/)
