@@ -3,7 +3,7 @@ import { soma, mult, salvarResultado } from "./utils.js";
 const a = 5;
 const b = 3;
 
-const path = ".\\result.txt";
+const path = "./result.txt";
 
 console.log(`A: ${a}`);
 console.log(`B: ${b}`);
