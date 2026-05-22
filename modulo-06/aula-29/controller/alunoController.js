@@ -31,3 +31,30 @@ export const deletarAluno = async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 }
+
+export const atualizarAluno = async (req, res) => {
+    const { id } = req.params;
+    const { name, age, email } = req.body;
+    try {
+        const aluno = await Aluno.findByIdAndUpdate(id, { name, age, email }, { new: true });
+        if (!aluno) {
+            return res.status(404).json({ message: 'Aluno não encontrado' });
+        }
+        return res.json(aluno);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+export const buscarAlunoPorId = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const aluno = await Aluno.findById(id);
+        if (!aluno) {
+            return res.status(404).json({ message: 'Aluno não encontrado' });
+        }
+        return res.json(aluno);
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
