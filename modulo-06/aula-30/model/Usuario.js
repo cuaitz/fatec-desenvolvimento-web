@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
 const usuarioSchema = new mongoose.Schema({
   nome:  { type: String, required: true },
@@ -7,11 +7,10 @@ const usuarioSchema = new mongoose.Schema({
   senha: { type: String, required: true, minlength: 6 }
 }, { timestamps: true });
 
-// Hook: criptografar senha antes de salvar
-usuarioSchema.pre('save', async function(next) {
-  if (!this.isModified('senha')) return next();
+// criptografa a senha antes de salvar
+usuarioSchema.pre('save', async function() {
+  if (!this.isModified('senha')) return;
   this.senha = await bcrypt.hash(this.senha, 10);
-  next();
 });
 
 // Método para comparar senha
@@ -19,4 +18,4 @@ usuarioSchema.methods.compararSenha = function(senha) {
   return bcrypt.compare(senha, this.senha);
 };
 
-module.exports = mongoose.model('users', usuarioSchema);
+export default mongoose.model('users', usuarioSchema);
